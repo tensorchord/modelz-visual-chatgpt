@@ -17,6 +17,16 @@ RUN apt update && \
         ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    libfontconfig1 \
+    libxrender1 \
+    && rm -rf /var/lib/apt/lists/*
+    
 RUN set -x && \
     UNAME_M="$(uname -m)" && \
     if [ "${UNAME_M}" = "x86_64" ]; then \
