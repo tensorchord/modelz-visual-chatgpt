@@ -9,4 +9,4 @@ ADD requirements.txt main.py /workspace/
 
 RUN pip install -r /workspace/requirements.txt
 
-CMD ["python", "/workspace/main.py"]
+CMD ["python", "visual_chatgpt.py", "--load", "ImageCaptioning_cpu,Text2Image_cpu"]

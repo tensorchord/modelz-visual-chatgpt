@@ -1,12 +1,6 @@
-# Modelz Gradio Template
+# Modelz Visual ChatGPT
 
-This is a template for creating a [Gradio](https://gradio.app/) app on [Modelz](https://modelz.ai/).
-
-Building an Gradio app could be straightforward. You will need to provide three key components:
-
-- A `main.py` file: This file contains the code for making predictions.
-- A `requirements.txt` file: This file lists all the dependencies required for the server code to run.
-- A `Dockerfile` or a simpler [`build.envd`](https://envd.tensorchord.ai/guide/getting-started.html): This file contains instructions for building a Docker image that encapsulates the server code and its dependencies.
+[visual-chatgpt](https://github.com/microsoft/visual-chatgpt) with Dockerfile and build.envd.
 
 ## Build
 
