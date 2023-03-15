@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libfontconfig1 \
-    libx11-6:i386 \
+    libx11-dev \
     libxrender1 \
     && rm -rf /var/lib/apt/lists/*
 
