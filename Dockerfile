@@ -59,7 +59,7 @@ RUN pip install -r requirements.txt
 
 RUN mkdir -p /workspace
 
-COPY main.py workspace/
+COPY visual_chatgpt.py workspace/
 
 WORKDIR /workspace
 
