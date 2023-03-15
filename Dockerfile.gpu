@@ -63,4 +63,4 @@ COPY main.py workspace/
 
 WORKDIR /workspace
 
-ENTRYPOINT [ "python", "main.py" ]
+ENTRYPOINT ["python", "visual_chatgpt.py", "--load", "ImageCaptioning_cuda:0,Text2Image_cuda:0"]
