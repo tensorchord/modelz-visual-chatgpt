@@ -9,11 +9,11 @@ In the `Dockerfile`, you need to define the instructions for building a Docker i
 In most cases, you could use the template in the repository.
 
 ```bash
-docker build -t docker.io/USER/IMAGE .
+docker build -t docker.io/USER/IMAGE -f Dockerfile.cpu .
 docker push docker.io/USER/IMAGE
 
 # GPU
-docker build -t docker.io/USER/IMAGE -f Dockerfile.gpu .
+docker build -t docker.io/USER/IMAGE -f Dockerfile .
 docker push docker.io/USER/IMAGE
 ```
 
