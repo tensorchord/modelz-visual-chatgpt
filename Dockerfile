@@ -24,9 +24,10 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libfontconfig1 \
+    libx11-6:i386 \
     libxrender1 \
     && rm -rf /var/lib/apt/lists/*
-    
+
 RUN set -x && \
     UNAME_M="$(uname -m)" && \
     if [ "${UNAME_M}" = "x86_64" ]; then \
