@@ -3,12 +3,13 @@
 def basic():
     install.python()
     install.python_packages(requirements="requirements.txt")
+    install.apt_packages(["ffmpeg","libsm6","libxext6"])
 
 # build is the default build function that will be used to build the CPU image.
 # envd build --output type=image,name=<image>,push=true
 def build():
     basic()    
-    io.copy("main.py", "/")
+    io.copy("visual_chatgpt.py", "/")
     config.entrypoint(["python", "visual_chatgpt.py", "--load", "ImageCaptioning_cpu,Text2Image_cpu"])
 
 # build_gpu is a custom build function that will be used to build the GPU image.
@@ -16,5 +17,5 @@ def build():
 def build_gpu():
     basic()
     install.cuda(version="11.6.2")
-    io.copy("main.py", "/")
+    io.copy("visual_chatgpt.py", "/")
     config.entrypoint(["python", "visual_chatgpt.py", "--load", "ImageCaptioning_cuda:0,Text2Image_cuda:0"])
