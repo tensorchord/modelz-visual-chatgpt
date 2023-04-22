@@ -38,6 +38,7 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v2
         with:
+          registry: us-central1-docker.pkg.dev
           username: ${{ secrets.GCR_USERNAME }}
           password: ${{ secrets.GCR_TOKEN }}
 
