@@ -67,7 +67,9 @@ RUN update-alternatives --install /usr/bin/python python ${ENVD_PREFIX}/python 1
 
 COPY requirements.txt /
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && \
+    pip install git+https://github.com/IDEA-Research/GroundingDINO.git && \
+    pip install git+https://github.com/facebookresearch/segment-anything.git
 
 RUN mkdir -p /workspace
 
