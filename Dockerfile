@@ -12,7 +12,7 @@ ARG CONDA_VERSION=py310_22.11.1-1
 
 RUN apt update && \
     apt install -y --no-install-recommends \
-        wget git \
+        wget git build-essential \
         libglib2.0-0 \
         ca-certificates && \
     rm -rf /var/lib/apt/lists/*
